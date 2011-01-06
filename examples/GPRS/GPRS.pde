@@ -31,10 +31,10 @@ void setup(){
  
  /*If you are using a Telit module with a on/off pin you can
  *use the turnOn function. It is used with the supplied circuit
- *from www.GROUNDLAB/whatever*/
+ *from Wiki.groundlab.cc
  
  //******************************
-  myGsmGPRS.turnOn(turnOnPin);
+ // myGsmGPRS.turnOn(turnOnPin);
  //******************************
  
  /*Then call the init function which sets the band to use.
@@ -76,12 +76,12 @@ void talkReply(){
                     
                     case '%':  //place a get request
                                     //HOST                      //Resource Path        //received data size
-                    placeGetRequest("www.johnhenryshammer.com", "/cTest/testGet.html", 500);
+                    placeGetRequest("www.google.com", "/index.html", 500);
                     break;
                     
                     case '~':  //place Post request
                                      //HOST                      //resource path    //POST STRING          //received data size
-                    placePostRequest("www.johnhenryshammer.com","/cTest/myPing.php","testPing=helloworld", 500);
+                    placePostRequest("www.someUrl.com","/postTest/myPing.php","testPing=helloworld", 500);
                     break;
                     
                     case '^':  //disconnect from network and turn off telit

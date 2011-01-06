@@ -1,4 +1,5 @@
-#include <gsmSMS.h>
+#include <gsmSMS.h> //You just need to import the gsmSMS.h file if you are just doing SMS message
+
 //*******PIN DEFS***********
 #define turnOnPin 40        //used to turn on off Telit
 //**************************
@@ -24,10 +25,10 @@ void setup(){
  
  /*If you are using a Telit module with a on/off pin you can
  *use the turnOn function. It is used with the supplied circuit
- *from www.GROUNDLAB/whatever*/
+ *from Wiki.Grounglab.cc
  
  //******************************
-  myGsmSMS.turnOn(turnOnPin);
+ //myGsmSMS.turnOn(turnOnPin);  //only needed if you have supporing hardware to turn on the Telit
  //******************************
  
  
@@ -60,14 +61,14 @@ void loop(){
   
   /* OR you can just say */ 
   
-  //GsmSMS.sendNoSaveCMGS("3473017780","Hello Poodles");
+  //GsmSMS.sendNoSaveCMGS("18007663537","Hello Poodles");
   
   /*Use the talkReply function to get a good overview of the functionality (see below)*/
  
   talkReply();   
 }
 
-//type '%' to send a text message ***REPLACE tel# AND MESSAGE FIRST!***
+//type '%' to send a text message ***REPLACE tel# AND MESSAGE FIRST! in checkNetworkSendMessage()***
 //type '~' to read any messages that have been sent to your phone and then delete them.
 //type '^' to shutdown telit (if your using a telit)
 //otherwise when you type you are sending commands striaght to the telit like "AT"
