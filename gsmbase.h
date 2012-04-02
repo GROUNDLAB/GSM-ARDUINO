@@ -27,7 +27,8 @@
 #include <inttypes.h>
 #include <stdlib.h>
 #include <string.h>
-#include <WProgram.h>
+#include <Arduino.h>
+//#include <WProgram.h>
 
 //#include "serial.h"
 //#include "ioHelper.h"
